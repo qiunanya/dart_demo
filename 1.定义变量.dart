@@ -4,6 +4,7 @@
  * 明确声明： 类型 变量名称=赋值
  * 类型推导：var /const/final/dynamic
  * 
+ * 
  */
 main(List<String> args) {
   //1.明确的声明（制定类型）
