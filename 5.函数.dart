@@ -4,7 +4,7 @@ main(List<String> args) {
   noarg("qiu");
    noarg("qiu",11);
 
-   funPara("yun");
+   funPara("yun",age: 14,h: 1.124);
 
 }
 
@@ -16,7 +16,7 @@ int sum (int a,int b){
  * dart函数参数分为：必传参数和可选参数
  * 可选参数 隐式可选参数和命名可选参数
  * 隐式可选参数:[]
- * 命名可选参数:{}
+ * 命名可选参数:{} 传参时需要带上属性名
  */
 void noarg(String name,[int age,double h]){
   print("${name} ${age} ${h}");
