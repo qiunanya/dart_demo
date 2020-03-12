@@ -1,0 +1,77 @@
+ 知识点梳理：
+ 1.Column的属性mainAxisAlignment: MainAxisAlignment.center，当组件纵向排列，内容过少居于顶部，使用这个属性可以使内容居中显示
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Center(
+      child: Text(
+        '我的第一个 Flutter 项目跑起来了',
+        textDirection: TextDirection.rtl,
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.orange,
+        ),
+      ),
+    )
+
+
+// demo 放入main.dart 中即可运行
+
+import 'package:flutter/material.dart';
+
+void main(){
+  // Text 需要传参一个方向参数
+  // Scaffold 页面结构脚手架
+  // 文本居中centerTitle：true
+  runApp(
+     MaterialApp(
+       title: '我的 Flutter',
+       home: Scaffold(
+         appBar: AppBar(
+           title: Text("Flutter App"),
+           centerTitle: true,
+         ),
+         body: Center(
+           child: Text(
+             '我的第一个 Flutter 项目跑起来了',
+             textDirection: TextDirection.rtl,
+             style: TextStyle(
+               fontSize: 25,
+               color: Colors.orange,
+             ),
+           ),
+         ),
+       )
+     )
+  );
+}
+
+// 布局架构
+MaterialApp(
+       title: '我的 Flutter',
+       home: Scaffold(
+         appBar: AppBar(
+           title: Text("Flutter App"),
+           centerTitle: true,
+         ),
+         body: ContentWidget()
+       )
+     )

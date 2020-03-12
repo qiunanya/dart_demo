@@ -1,0 +1,9 @@
+创建自己的widget
+
+继承StatelessWidget：没有状态，必须实现build方法
+应用场景：回显数据，不用动态改变
+
+继承StatefulWidget：有状态，State类
+应用场景：动态更新数据，比如购物车数量，计算之类的需求，下拉刷新，上拉加载等等
+
+

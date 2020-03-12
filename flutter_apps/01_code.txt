@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+// Text 需要传参一个方向参数
+// Scaffold 页面结构脚手架
+// 文本居中centerTitle：true
+void main()=>runApp(MyFlutterApp());
+
+//抽取MaterialApp
+class MyFlutterApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+        title: '我的 Flutter',
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("Flutter App"),
+              centerTitle: true,
+            ),
+            body: ContentWidget()
+        )
+    );
+  }
+
+}
+
+// 内容
+class ContentWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return TextWidget();
+  }
+}
+
+// 内容抽取
+class TextWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Text(
+        '我的第一个 Flutter 项目跑起来了',
+        textDirection: TextDirection.rtl,
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.orange,
+        ),
+      ),
+    );
+  }
+
+}
